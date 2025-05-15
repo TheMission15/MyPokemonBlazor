@@ -1,8 +1,8 @@
-﻿using ALevelBlazorTemplate.Model;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MyPokemonBlazor.Model;
 
-namespace ALevelBlazorTemplate.Context
+namespace MyPokemonBlazor.Context
 {
     public class DatabaseContext : IdentityDbContext<User>
     {
