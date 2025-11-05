@@ -1,9 +1,9 @@
-using MyPokemonBlazor.Components;
+using PokemonApp.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
-using MyPokemonBlazor.Components.Account;
-using MyPokemonBlazor.Context;
-using MyPokemonBlazor.Model;
+using PokemonApp.Components.Account;
+using PokemonApp.Context;
+using PokemonApp.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 

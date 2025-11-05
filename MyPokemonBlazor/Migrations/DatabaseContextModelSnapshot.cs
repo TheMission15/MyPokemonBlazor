@@ -3,11 +3,11 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MyPokemonBlazor.Context;
+using PokemonApp.Context;
 
 #nullable disable
 
-namespace MyPokemonBlazor.Migrations
+namespace PokemonApp.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
     partial class DatabaseContextModelSnapshot : ModelSnapshot
@@ -145,7 +145,7 @@ namespace MyPokemonBlazor.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("MyPokemonBlazor.Model.Pokemon", b =>
+            modelBuilder.Entity("PokemonApp.Model.Pokemon", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -185,7 +185,7 @@ namespace MyPokemonBlazor.Migrations
                     b.ToTable("Pokemons");
                 });
 
-            modelBuilder.Entity("MyPokemonBlazor.Model.Trainer", b =>
+            modelBuilder.Entity("PokemonApp.Model.Trainer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -205,7 +205,7 @@ namespace MyPokemonBlazor.Migrations
                     b.ToTable("Trainers");
                 });
 
-            modelBuilder.Entity("MyPokemonBlazor.Model.User", b =>
+            modelBuilder.Entity("PokemonApp.Model.User", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
@@ -280,7 +280,7 @@ namespace MyPokemonBlazor.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("MyPokemonBlazor.Model.User", null)
+                    b.HasOne("PokemonApp.Model.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -289,7 +289,7 @@ namespace MyPokemonBlazor.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("MyPokemonBlazor.Model.User", null)
+                    b.HasOne("PokemonApp.Model.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -304,7 +304,7 @@ namespace MyPokemonBlazor.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MyPokemonBlazor.Model.User", null)
+                    b.HasOne("PokemonApp.Model.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -313,16 +313,16 @@ namespace MyPokemonBlazor.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("MyPokemonBlazor.Model.User", null)
+                    b.HasOne("PokemonApp.Model.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MyPokemonBlazor.Model.Trainer", b =>
+            modelBuilder.Entity("PokemonApp.Model.Trainer", b =>
                 {
-                    b.HasOne("MyPokemonBlazor.Model.Pokemon", "Companion")
+                    b.HasOne("PokemonApp.Model.Pokemon", "Companion")
                         .WithMany("Trainers")
                         .HasForeignKey("CompanionId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -331,7 +331,7 @@ namespace MyPokemonBlazor.Migrations
                     b.Navigation("Companion");
                 });
 
-            modelBuilder.Entity("MyPokemonBlazor.Model.Pokemon", b =>
+            modelBuilder.Entity("PokemonApp.Model.Pokemon", b =>
                 {
                     b.Navigation("Trainers");
                 });

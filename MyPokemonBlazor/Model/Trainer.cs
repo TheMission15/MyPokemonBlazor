@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
-namespace MyPokemonBlazor.Model
+namespace PokemonApp.Model
 {
     public class Trainer
     {

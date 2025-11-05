@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using MyPokemonBlazor.Model;
+using PokemonApp.Model;
 using System.Security.Claims;
 
-namespace MyPokemonBlazor.Components.Account
+namespace PokemonApp.Components.Account
 {
     public static class AccountRouteExtensions
     {

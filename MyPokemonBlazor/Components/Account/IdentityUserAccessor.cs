@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using MyPokemonBlazor.Model;
+using PokemonApp.Model;
 
-namespace MyPokemonBlazor.Components.Account
+namespace PokemonApp.Components.Account
 {
     internal sealed class IdentityUserAccessor(UserManager<User> userManager, IdentityRedirectManager redirectManager)
     {

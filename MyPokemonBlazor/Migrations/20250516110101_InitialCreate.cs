@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MyPokemonBlazor.Migrations
+namespace PokemonApp.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MyPokemonBlazor.Model;
+using PokemonApp.Model;
 
-namespace MyPokemonBlazor.Context
+namespace PokemonApp.Context
 {
     public class DatabaseContext : IdentityDbContext<User>
     {
